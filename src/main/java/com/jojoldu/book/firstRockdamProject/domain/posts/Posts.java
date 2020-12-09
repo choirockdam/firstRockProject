@@ -1,4 +1,4 @@
-package com.jojoldu.book.firstRockdamProject.domain;
+package com.jojoldu.book.firstRockdamProject.domain.posts;
 
 
 import lombok.Builder;

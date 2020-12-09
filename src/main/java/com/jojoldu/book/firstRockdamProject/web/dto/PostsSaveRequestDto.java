@@ -1,7 +1,7 @@
 package com.jojoldu.book.firstRockdamProject.web.dto;
 
 
-import com.jojoldu.book.firstRockdamProject.domain.Posts;
+import com.jojoldu.book.firstRockdamProject.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

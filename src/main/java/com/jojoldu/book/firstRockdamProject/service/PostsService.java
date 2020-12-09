@@ -1,11 +1,10 @@
 package com.jojoldu.book.firstRockdamProject.service;
 
 
-import com.jojoldu.book.firstRockdamProject.domain.Posts;
-import com.jojoldu.book.firstRockdamProject.domain.PostsRepository;
+import com.jojoldu.book.firstRockdamProject.domain.posts.Posts;
+import com.jojoldu.book.firstRockdamProject.domain.posts.PostsRepository;
 import com.jojoldu.book.firstRockdamProject.web.dto.PostsResponseDto;
 import com.jojoldu.book.firstRockdamProject.web.dto.PostsSaveRequestDto;
-import com.jojoldu.book.firstRockdamProject.web.dto.PostsUpdateDto;
 import com.jojoldu.book.firstRockdamProject.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
