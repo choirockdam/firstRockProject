@@ -1,18 +1,21 @@
 package com.jojoldu.book.firstRockdamProject.web.dto;
 
 import com.jojoldu.book.firstRockdamProject.domain.Posts;
+import lombok.Getter;
 
+
+@Getter
 public class PostsResponseDto {
 
     private Long id;
     private String title;
-    private String cotent;
+    private String content;
     private String author;
 
     public PostsResponseDto(Posts entity) {
-        this.id = id;
-        this.title = title;
-        this.cotent = cotent;
-        this.author = author;
+        this.id = entity.getId();
+        this.title = entity.getTitle();
+        this.content = entity.getContent();
+        this.author = entity.getAuthor();
     }
 }
