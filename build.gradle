@@ -1,0 +1,47 @@
+buildscript{
+    ext{              // build.gradle 에서 사용하는 전역변수를 설정.
+
+        springBootVersion = '2.1.7.RELEASE'// 얘가 전역 변수
+    }
+    repositories{
+        mavenCentral()
+      //  jcenter()
+
+    }
+    dependencies{
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        //spring-boot-gradle-plugin라는 스프링 부트 그레이들 플러그인의 2.1.7.RELEASE를 의존성으로 받겠다.
+
+    }
+
+
+}
+
+apply plugin:'java'
+apply plugin:'eclipse'
+apply plugin:'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+//필수라 얘네는 항상 추가해야함 .
+group 'com.jojoldu.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories{ //얘는 각종 의존성(라이브러리)들을 어떤 원격 저장소에서 받을지를 정합니다.
+
+    mavenCentral() //기본적으로 얘를 많이 사용하지만
+  //  jcenter() // 라이브러리 업로드 난이도 떄문에 얘도 많이 사용합니다.
+}
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-test')
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile('com.h2database:h2')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
+
+}
+
