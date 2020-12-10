@@ -32,6 +32,7 @@ repositories{ //얘는 각종 의존성(라이브러리)들을 어떤 원격 저
   //  jcenter() // 라이브러리 업로드 난이도 떄문에 얘도 많이 사용합니다.
 }
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-test')
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
